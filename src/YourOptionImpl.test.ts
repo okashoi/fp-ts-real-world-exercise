@@ -1,4 +1,4 @@
-import { some, none } from "fp-ts/es6/Option";
+import { some, none } from "fp-ts/es6/Option"; //このimportがエラーになる
 
 import { YourOptionImpl } from "./YourOptionImpl";
 

@@ -12,7 +12,25 @@
   "devDependencies": {
     "typescript": "^4.5.4"
   },
-  "script": {
+  "type": "module",
+  "scripts": {
     "test": "jest"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ],
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    },
+    "testMatch": [
+      "**/*.test.ts"
+    ]
   }
 }
