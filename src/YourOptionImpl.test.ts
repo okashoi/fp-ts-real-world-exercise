@@ -43,24 +43,24 @@ describe("optPlusGtTen", (): void => {
   });
 });
 
-describe("optPlusGeTenAsTwiceString", (): void => {
+describe("optPlusGeTenAsTwicestring", (): void => {
   test("両方Someなら足す, 10以上なら2倍String", (): void => {
-    const ret = impl.optPlusGeTenAsTwiceString(some(1), some(9));
+    const ret = impl.optPlusGeTenAsTwicestring(some(1), some(9));
     expect(ret).toBe("20");
   });
 
   test("両方Someなら足す, 10未満ならそのままString", (): void => {
-    const ret = impl.optPlusGeTenAsTwiceString(some(1), some(8));
+    const ret = impl.optPlusGeTenAsTwicestring(some(1), some(8));
     expect(ret).toBe("9");
   });
 
   test("NoneがあったらNone(1)", (): void => {
-    const ret = impl.optPlusGeTenAsTwiceString(none, some(8));
+    const ret = impl.optPlusGeTenAsTwicestring(none, some(8));
     expect(ret).toBe(none);
   });
 
   test("NoneがあったらNone(2)", (): void => {
-    const ret = impl.optPlusGeTenAsTwiceString(some(1), none);
+    const ret = impl.optPlusGeTenAsTwicestring(some(1), none);
     expect(ret).toBe(none);
   });
 });
