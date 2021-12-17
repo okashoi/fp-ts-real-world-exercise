@@ -1,5 +1,4 @@
-import { some, none } from "fp-ts/es6/Option"; //このimportがエラーになる
-
+import { some, none } from 'fp-ts/lib/Option';
 import { YourOptionImpl } from "./YourOptionImpl";
 
 const impl = new YourOptionImpl();
