@@ -1,9 +1,15 @@
-import { Option } from 'fp-ts/es6/Option'
+import { fold, Option, none, some } from 'fp-ts/lib/Option'
 import { OptionOperation } from './ OptionOperation';
 
 export class YourOptionImpl implements OptionOperation {
     optPlus(a: Option<number>, b: Option<number>): Option<number> {
-        throw new Error('Method not implemented.');
+        return fold(
+            ()          => () => none,
+            (y: number) => fold(
+                ()          => none,
+                (x: number) => some(x +  y),
+            ),
+        )(a)(b);
     }
     optPlusGtTen(a: Option<number>, b: Option<number>): Option<number> {
         throw new Error('Method not implemented.');
